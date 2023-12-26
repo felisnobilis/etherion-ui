@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Realm Details</h2>
+  <div *ngIf="realm">
+    <p><strong>ID:</strong> {{ realm.id }}</p>
+    <p><strong>Name:</strong> {{ realm.name }}</p>
+    <!-- Display other realm properties as needed -->
+
+    <!-- Conditionally show the join button -->
+    <button *ngIf="canJoin" (click)="joinRealm()" class="btn btn-primary">
+      Join Realm
+    </button>
+  </div>
+</div>

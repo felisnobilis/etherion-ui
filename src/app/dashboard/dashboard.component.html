@@ -1,0 +1,36 @@
+<div class="container">
+  <app-navbar></app-navbar>
+
+  <h2>Welcome to Etherion</h2>
+  <p>This is the dashboard page where you can see and manage your content.</p>
+
+
+  <div class="container">
+    <h2>Realms</h2>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let realm of realms">
+        <td>{{ realm.id }}</td>
+        <td>{{ realm.name }}</td>
+        <td>
+          <button
+            [routerLink]="['/realm', realm.id]"
+            class="btn btn-primary"
+          >
+            View Details
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
