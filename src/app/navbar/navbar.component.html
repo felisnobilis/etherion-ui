@@ -1,0 +1,8 @@
+<nav>
+  <div class="navbar">
+    <ul>
+      <li *ngIf="!authenticated"><button (click)="login()">Login</button></li>
+      <li *ngIf="authenticated"><button (click)="logout()">Logout</button></li>
+    </ul>
+  </div>
+</nav>
